@@ -122,7 +122,7 @@ The two differing structures may also be expressed with appropriate parentheses,
 
 If the second requirement is not satisfied, ambiguous sentences arise. These may enrich spoken languages; ambiguous programming languages, however, are simply useless. We call a syntactic class ambiguous if it can be attributed several structures. A language is ambiguous if it contains at least one ambiguous syntactic class (construct).
 
-## 2.1 Excercices
+## 2.1 Exercises
 
 ### 2.1.1
 The Algol 60 Report contains the following syntax (translated into EBNF):
