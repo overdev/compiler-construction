@@ -8,8 +8,8 @@ As a simple example we shall consider a language featuring several data types. I
 
 | Syntax                     | Attribute rule | Context condition |
 |:--------------------------:|:--------------:|:-----------------:|
-| `exp(T0) = term(T1) | `    | T0 := T1       |                   |
-| `exp(T1) "+" term(T2) | `  | T0 := T1       | T1 = T2           |
+| `exp(T0) = term(T1) \|`    | T0 := T1       |                   |
+| `exp(T1) "+" term(T2) \|`  | T0 := T1       | T1 = T2           |
 | `exp(T1) "-" term(T2). `   | T0 := T1       | T1 = T2           |
 
 If operands of the types INTEGER and REAL are to be admissible in mixed expressions, the rules become more relaxed, but also more complicated:
