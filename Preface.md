@@ -1,8 +1,3 @@
----
-
-
----
-
 <h1 id="compiler-construction">Compiler Construction</h1>
 <h2 id="niklaus-wirth">Niklaus Wirth</h2>
 <p><em>This is a slightly revised version of the book published by Addison-Wesley in 1996</em><br>
