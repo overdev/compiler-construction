@@ -6,11 +6,11 @@ In attributed grammars certain attributes are associated with individual constru
 
 As a simple example we shall consider a language featuring several data types. Instead of specifying separate syntax rules for expressions of each type (as was done in Algol 60), we define expressions exactly once, and associate the data type T as attribute with every construct involved. For example, an expression of type T is denoted as exp(T), that is, as exp with attribute value T. Rules about type compatibility are then regarded as additions to the individual syntactic equations. For instance, the requirements that both operands of addition and subtraction must be of the same type, and that the result type is the same as that of the operands, are specified by such additional attribute rules:
 
-| Syntax                    | Attribute rule | Context condition |
-|:-------------------------:|:--------------:|:-----------------:|
-| `exp(T0) = term(T1) |`    | T0 := T1       |                   |
-| `exp(T1) "+" term(T2) |`  | T0 := T1       | T1 = T2           |
-| `exp(T1) "-" term(T2). `  | T0 := T1       | T1 = T2           |
+| Syntax                     | Attribute rule | Context condition |
+|:--------------------------:|:--------------:|:-----------------:|
+| `exp(T0) = term(T1) | `    | T0 := T1       |                   |
+| `exp(T1) "+" term(T2) | `  | T0 := T1       | T1 = T2           |
+| `exp(T1) "-" term(T2). `   | T0 := T1       | T1 = T2           |
 
 If operands of the types INTEGER and REAL are to be admissible in mixed expressions, the rules become more relaxed, but also more complicated:
 ```
@@ -55,17 +55,17 @@ END expression
 
 As our second example we consider a language consisting of expressions whose factors are numbers only. It is a short step to extend the parser into a program not only recognizing, but at the same time also evaluating expressions. We associate with each construct its value through an attribute called val. In analogy to the type compatibility rules in our previous example, we now must process evaluation rules while parsing. Thereby we have implicitly introduced the notion of semantics:
 ```
-Syntax                                Attribute rule (semantics)
-exp(v0) = term(v1)                    v0 := v1
-        | exp(v1) "+" term(v2)        v0 := v1 + v2
-        | exp(v1) "-" term(v2).       v0 := v1 - v2
+Syntax                                   Attribute rule (semantics)
+exp(v0)    = term(v1)                    v0 := v1
+           | exp(v1) "+" term(v2)        v0 := v1 + v2
+           | exp(v1) "-" term(v2).       v0 := v1 - v2
 
-term(v0) = factor(v1)                 v0 := v1
-         | term(v1) "*" factor(v2)    v0 := v1 * v2
-         | term(v1) "/" factor(v2).   v0 := v1 / v2
+term(v0)   = factor(v1)                  v0 := v1
+           | term(v1) "*" factor(v2)     v0 := v1 * v2
+           | term(v1) "/" factor(v2).    v0 := v1 / v2
 
-factor(v0) = number(v1)               v0 := v1
-           | "(" exp(v1) ")".         v0 := v1
+factor(v0) = number(v1)                  v0 := v1
+           | "(" exp(v1) ")".            v0 := v1
 ```
 Here, the attribute is the computed, numeric value of the recognized construct. The necessary extension of the corresponding parsing procedure leads to the following procedure for expressions:
 ```
@@ -79,7 +79,8 @@ BEGIN term(val1);
 	val0 := val1
 END expression
 ```
-## 5.3. Translation rules
+
+## 5.3 Translation rules
 
 A third example of the application of attributed grammars exhibits the basic structure of a compiler. The additional rules associated with a production here do not govern attributes of symbols, but specify the output (code) issued when the production is applied in the parsing process. The generation of output may be considered as a side-effect of parsing. Typically, the output is a sequence of instructions. In this example, the instructions are replaced by abstract symbols, and their output is specified by the operator put.
 ```
@@ -94,6 +95,7 @@ factor = number             put(number)
          "(" exp ")".       -
 ```
 As can easily be verified, the sequence of output symbols corresponds to the parsed expression in postfix notation. The parser has been extended into a translator.
+
 |    Infix notation | Postfix notation |
 |:-----------------:|:----------------:|
 |             2 + 3 |            2 3 + |
