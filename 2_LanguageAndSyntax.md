@@ -64,20 +64,23 @@ A language is, therefore, the set of sequences of terminal symbols which, starti
 
 We also wish to define rigorously and precisely the notation in which syntactic equations are specified. Let nonterminal symbols be identifiers as we know them from programming languages, that is, as sequences of letters (and possibly digits), for example, expression, term. Let terminal symbols be character sequences enclosed in quotes (strings), for example, `=`, `|`. For the definition of the structure of these equations it is convenient to use the tool just being defined itself:
 
-> syntax = production syntax | ∅.
-> production = identifier "=" expression "." .
-> expression = term | expression "|" term.
-> term = factor | term factor.
-> factor = identifier | string.
-> identifier = letter | identifier letter | identifier digit.
-> string = stringhead """.
-> stringhead = """ | stringhead character.
-> letter = "A" | ... | "Z".
-> digit = "0" | ... | "9".
+```
+syntax = production syntax | ∅.
+production = identifier "=" expression "." .
+expression = term | expression "|" term.
+term = factor | term factor.
+factor = identifier | string.
+identifier = letter | identifier letter | identifier digit.
+string = stringhead """.
+stringhead = """ | stringhead character.
+letter = "A" | ... | "Z".
+digit = "0" | ... | "9".
+```
 
 This notation was introduced in 1960 by J. Backus and P. Naur in almost identical form for the formal description of the syntax of the language Algol 60. It is therefore called Backus Naur Form (BNF) (Naur, 1960). As our example shows, using recursion to express simple repetitions is rather detrimental to readability. Therefore, we extend this notation by two constructs to express repetition and optionality. Furthermore, we allow expressions to be enclosed within parentheses. Thereby an extension of BNF called EBNF (Wirth, 1977) is postulated, which again we immediately use for its own, precise definition:
 
-> syntax = {production}.
+```
+ syntax = {production}.
  production = identifier "=" expression "." .
  expression = term {"|" term}.
  term = factor {factor}.
@@ -86,11 +89,13 @@ This notation was introduced in 1960 by J. Backus and P. Naur in almost identica
  string = """ {character} """.
  letter = "A" | ... | "Z".
  digit = "0" | ... | "9".
+```
 
 A factor of the form `{x}` is equivalent to an arbitrarily long sequence of `x`, including the empty sequence. A production of the form
 
-> A = AB | ∅.
-
+```
+A = AB | ∅.
+```
 
 is now formulated more briefly as `A = {B}`. A factor of the form `[x]` is equivalent to `x or nothing`, that is, it expresses optionality. Hence, the need for the special symbol `∅` for the empty sequence vanishes.
 
