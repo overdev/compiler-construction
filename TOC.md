@@ -2,18 +2,18 @@
 
 [Preface](Preface.md)
 
-+ 1. [Introduction](1_Introduction.md)
++  1 [Introduction](1_Introduction.md)
 
-+ 2. Language and Syntax
-  * 2.1. Exercises
++  2 Language and Syntax
+  * 2.1 Exercises
 
-3. Regular Languages
++  3 Regular Languages
 
-4. Analysis of Context-free Languages
-   * 4.1. The method of recursive descent
-   * 4.2. Table-driven top-down parsing
-   * 4.3. Bottom-up parsing
-   * 4.4. Exercises
++  4 Analysis of Context-free Languages
+   * 4.1 The method of recursive descent
+   * 4.2 Table-driven top-down parsing
+   * 4.3 Bottom-up parsing
+   * 4.4 Exercises
 
 + 5. Attributed Grammars and Semantics
    * 5.1. Type rules
