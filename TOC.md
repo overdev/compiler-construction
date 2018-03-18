@@ -1,82 +1,82 @@
-<h1 id="contents">Contents</h1>
-<p><a href="./Preface.md">Preface</a></p>
-<ol>
-<li><a href="./Intro.md">Introduction</a></li>
-<li>Language and Syntax<br>
-2.1. Exercises</li>
-<li>Regular Languages</li>
-<li>Analysis of Context-free Languages<br>
-4.1. The method of recursive descent<br>
-4.2. Table-driven top-down parsing<br>
-4.3. Bottom-up parsing<br>
-4.4. Exercises</li>
-<li>Attributed Grammars and Semantics<br>
-5.1. Type rules<br>
-5.2. Evaluation rules<br>
-5.3. Translation rules<br>
-5.4. Exercises</li>
-<li>The Programming Language Oberon-0</li>
-<li>A Parser for Oberon-0<br>
-7.1. The scanner<br>
-7.2. The parser<br>
-7.3. Coping with syntactic errors<br>
-7.4. Exercises</li>
-<li>Consideration of Context Specified by Declarations<br>
-8.1. Declarations<br>
-8.2. Entries for data types<br>
-8.3. Data representation at run-time<br>
-8.4. Exercises</li>
-<li>A RISC Architecture as Target<br>
-9.1. Registers and resources<br>
-9.2. Register instructions<br>
-9.3. Memory instructions<br>
-9.4. Branch instructions<br>
-9.5. An emulator</li>
-<li>Expressions and Assignments<br>
-10.1. Straight code generation according to the stack principle<br>
-10.2. Delayed code generation<br>
-10.3. Indexed variables and record fields<br>
-10.4. Exercises</li>
-<li>Conditional and Repeated Statements and Boolean Expressions<br>
-11.1. Comparisons and jumps<br>
-11.2. Conditional and repeated statements<br>
-11.3. Boolean operations<br>
-11.4. Assignments to Boolean variables<br>
-11.5. Exercises</li>
-<li>Procedures and the Concept of Locality<br>
-12.1. Run-time organization of the store<br>
-12.2. Addressing of variables<br>
-12.3. Parameters<br>
-12.4. Procedure declarations and calls<br>
-12.5. Standard procedures<br>
-12.6. Function procedures<br>
-12.7. Exercises</li>
-<li>Elementary Data Types<br>
-13.1. The types REAL and LONGREAL<br>
-13.2. Compatibility between numeric data types<br>
-13.3. The data type SET<br>
-13.4. Exercises</li>
-<li>Open Arrays, Pointers and Procedure Types<br>
-14.1. Open arrays<br>
-14.2. Dynamic data structures and pointers<br>
-14.3. Procedure types<br>
-14.5. Exercises</li>
-<li>Modules and Separate Compilation<br>
-15.1. The principle of information hiding<br>
-15.2. Separate compilation<br>
-15.3. Implementation of symbol files<br>
-15.4. Addressing external objects<br>
-15.5. Checking configuration consistency<br>
-15.6. Exercises</li>
-<li>Code Optimizations and the Frontend/backend Structure<br>
-16.1. General considerations<br>
-16.2. Simple optimizations<br>
-16.3. Avoiding repeated evaluations<br>
-16.4. Register allocation<br>
-16.5. The frontend/backend compiler structure<br>
-16.6. Exercises<br>
-Appendix<br>
-Syntax of Oberon-0<br>
-The ASCII character set</li>
-</ol>
+# Contents
 
+[Preface](./Preface.md)
+
+1. [Introduction](./Intro.md)
+2. Language and Syntax
+2.1. Exercises
+3. Regular Languages
+4. Analysis of Context-free Languages
+4.1. The method of recursive descent
+4.2. Table-driven top-down parsing
+4.3. Bottom-up parsing
+4.4. Exercises
+5. Attributed Grammars and Semantics
+5.1. Type rules
+5.2. Evaluation rules
+5.3. Translation rules
+5.4. Exercises
+6. The Programming Language Oberon-0
+7. A Parser for Oberon-0
+7.1. The scanner
+7.2. The parser
+7.3. Coping with syntactic errors
+7.4. Exercises
+8. Consideration of Context Specified by Declarations
+8.1. Declarations
+8.2. Entries for data types
+8.3. Data representation at run-time
+8.4. Exercises
+9. A RISC Architecture as Target
+9.1. Registers and resources
+9.2. Register instructions
+9.3. Memory instructions
+9.4. Branch instructions
+9.5. An emulator
+10. Expressions and Assignments
+10.1. Straight code generation according to the stack principle
+10.2. Delayed code generation
+10.3. Indexed variables and record fields
+10.4. Exercises
+11. Conditional and Repeated Statements and Boolean Expressions
+11.1. Comparisons and jumps
+11.2. Conditional and repeated statements
+11.3. Boolean operations
+11.4. Assignments to Boolean variables
+11.5. Exercises
+12. Procedures and the Concept of Locality
+12.1. Run-time organization of the store
+12.2. Addressing of variables
+12.3. Parameters
+12.4. Procedure declarations and calls
+5
+12.5. Standard procedures
+12.6. Function procedures
+12.7. Exercises
+13. Elementary Data Types
+13.1. The types REAL and LONGREAL
+13.2. Compatibility between numeric data types
+13.3. The data type SET
+13.4. Exercises
+14. Open Arrays, Pointers and Procedure Types
+14.1. Open arrays
+14.2. Dynamic data structures and pointers
+14.3. Procedure types
+14.5. Exercises
+15. Modules and Separate Compilation
+15.1. The principle of information hiding
+15.2. Separate compilation
+15.3. Implementation of symbol files
+15.4. Addressing external objects
+15.5. Checking configuration consistency
+15.6. Exercises
+16. Code Optimizations and the Frontend/backend Structure
+16.1. General considerations
+16.2. Simple optimizations
+16.3. Avoiding repeated evaluations
+16.4. Register allocation
+16.5. The frontend/backend compiler structure
+16.6. Exercises
+Appendix
+Syntax of Oberon-0
+The ASCII character set
