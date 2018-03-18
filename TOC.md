@@ -1,8 +1,3 @@
----
-
-
----
-
 <h1 id="contents">Contents</h1>
 <p><a href="./Preface.md">Preface</a></p>
 <ol>
@@ -53,7 +48,6 @@
 12.2. Addressing of variables<br>
 12.3. Parameters<br>
 12.4. Procedure declarations and calls<br>
-5<br>
 12.5. Standard procedures<br>
 12.6. Function procedures<br>
 12.7. Exercises</li>
