@@ -53,7 +53,7 @@ The application of these simple translations rules generating a parser from a gi
 |                 | symbols that may follow K must be disjoint.
 ```
 These conditions are satisfied trivially in the examples of identifiers and integers, and therefore we obtain the following programs for their recognition:
-```Oberon
+```
 IF sym IN letters THEN next ELSE error END ;
 WHILE sym IN letters + digits DO
   CASE sym OF
@@ -87,7 +87,7 @@ string = """ {character} """.
 ```
 From this we derive the procedure `GetSym` which, upon each call, assigns a numeric value representing the next symbol read to the global variable sym. If the symbol is an identifier or a string, the actual character sequence is assigned to the further global variable id. It must be noted that typically a scanner also takes into account rules about blanks and ends of lines.
 Mostly these rules say: blanks and ends of lines separate consecutive symbols, but otherwise are of no significance. Procedure `GetSym`, formulated in Oberon, makes use of the following declarations.
-```Oberon
+```
 CONST IdLen = 32;
 ident = 0; literal = 2; lparen = 3; lbrak = 4; lbrace = 5; bar = 6; eql = 7;
 rparen = 8; rbrak = 9; rbrace = 10; period = 11; other = 12;
@@ -98,7 +98,7 @@ id: Identifier;
 R: Texts.Reader;
 ```
 Note that the abstract reading operation is now represented by the concrete call `Texts.Read(R, ch)`. `R` is a globally declared Reader specifying the source text. Also note that variable ch must be global, because at the end of GetSym it may contain the first character belonging to the next symbol. This must be taken into account upon the subsequent call of `GetSym`.
-```Oberon
+```
 PROCEDURE GetSym;
 	VAR i: INTEGER;
 	BEGIN
@@ -130,6 +130,7 @@ END GetSym
 ```
 
 ## 3.1 Exercise
+
 ### 3.1.1
 Sentences of regular languages can be recognized by finite state machines. They are usually described by transition diagrams. Each node represents a state, and each edge a state transition. The edge is labelled by the symbol that is read by the transition. Consider the following diagrams and describe the syntax of the corresponding languages in EBNF.
 
