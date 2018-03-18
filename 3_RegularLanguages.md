@@ -73,10 +73,11 @@ The significance of regular languages in connection with programming languages s
 This separation also has consequences on the structure of a compiler. The process of syntax analysis is based on a procedure to obtain the next symbol. This procedure in turn is based on the definition of symbols in terms of sequences of one or more characters. This latter procedure is called a scanner, and syntax analysis on this second, lower level, lexical analysis. The definition of symbols in terms of characters is typically given in terms of a regular language, and therefore the scanner is typically a state machine.
 
 We summarize the differences between the two levels as follows:
-| Process   | Input Element  | Algorithm  | Syntax  |
-|:----:|:----:|:----:|:----:|
-| Lexical Analysis   | Char  | Scanner  | Regular  |
-| Syntaz Analysis   | Symbol  | Parser  | Context free  |
+
+| Process          | Input Element | Algorithm | Syntax       |
+|:----------------:|:-------------:|:---------:|:------------:|
+| Lexical Analysis | Char          | Scanner   | Regular      |
+| Syntaz Analysis  | Symbol        | Parser    | Context free |
 
 As an example we show a scanner for a parser of EBNF. Its terminal symbols and their definition in terms of characters are
 ```
