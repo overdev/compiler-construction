@@ -5,7 +5,7 @@
 + 1 [Introduction](1_Introduction.md)
 
 + 2 [Language and Syntax](2_LanguageAndSyntax.md)
-   * 2.1 Exercises
+   * [2.1 Exercises](2_LanguageAndSyntax.md#21-exercises)
 
 + 3 Regular Languages
 
