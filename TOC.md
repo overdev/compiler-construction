@@ -4,7 +4,9 @@
 
 1. [Introduction](./Intro.md)
 2. Language and Syntax
+
 2.1. Exercises
+
 3. Regular Languages
 4. Analysis of Context-free Languages
 4.1. The method of recursive descent
