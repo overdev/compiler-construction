@@ -78,14 +78,14 @@ We also wish to define rigorously and precisely the notation in which syntactic 
 This notation was introduced in 1960 by J. Backus and P. Naur in almost identical form for the formal description of the syntax of the language Algol 60. It is therefore called Backus Naur Form (BNF) (Naur, 1960). As our example shows, using recursion to express simple repetitions is rather detrimental to readability. Therefore, we extend this notation by two constructs to express repetition and optionality. Furthermore, we allow expressions to be enclosed within parentheses. Thereby an extension of BNF called EBNF (Wirth, 1977) is postulated, which again we immediately use for its own, precise definition:
 
 > syntax = {production}.
-> production = identifier "=" expression "." .
-> expression = term {"|" term}.
-> term = factor {factor}.
-> factor = identifier | string | "(" expression ")" | "\[" expression "\]" | "{" expression "}".
-> identifier = letter {letter | digit}.
-> string = """ {character} """.
-> letter = "A" | ... | "Z".
-> digit = "0" | ... | "9".
+ production = identifier "=" expression "." .
+ expression = term {"|" term}.
+ term = factor {factor}.
+ factor = identifier | string | "(" expression ")" | "\[" expression "\]" | "{" expression "}".
+ identifier = letter {letter | digit}.
+ string = """ {character} """.
+ letter = "A" | ... | "Z".
+ digit = "0" | ... | "9".
 
 A factor of the form `{x}` is equivalent to an arbitrarily long sequence of `x`, including the empty sequence. A production of the form
 
