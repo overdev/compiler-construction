@@ -1,19 +1,19 @@
 # 2. Language and Syntax
 
 Every language displays a structure called its grammar or syntax. For example, a correct sentence always consists of a subject followed by a predicate, correct here meaning well formed. This fact can be described by the following formula:
-
-> sentence = subject predicate.
-
+```
+sentence = subject predicate.
+```
 If we add to this formula the two further formulas
-
-> subject = "John" | "Mary".
-> predicate = "eats" | "talks".
-
+```
+subject = "John" | "Mary".
+predicate = "eats" | "talks".
+```
 then we define herewith exactly four possible sentences, namely
-
-> John eats Mary eats
-> John talks Mary talks
-
+```
+John eats Mary eats
+John talks Mary talks
+```
 where the symbol | is to be pronounced as or. We call these formulas syntax rules, productions, or simply syntactic equations. Subject and predicate are syntactic classes. A shorter notation for the above omits meaningful identifiers:
 
 ```
