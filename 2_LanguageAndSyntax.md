@@ -50,7 +50,7 @@ V = "a" | "b" | "c" | "d".
 From this example it is evident that a syntax does not only define the set of sentences of a language, but also provides them with a structure. The syntax decomposes sentences in their constituents as shown in the example of Figure 2.1. The graphical representations are called structural trees or syntax trees.
 
 
-![](figures/cc_figure_2_1.png)
+![Figure 2.1](https://github.com/overdev/compiler-construction/blob/master/images/cc_figure_2_1.png)
 
 Let us now formulate the concepts presented above more rigorously:
 A language is defined by the following:
