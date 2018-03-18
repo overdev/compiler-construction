@@ -14,7 +14,7 @@ The translation process essentially consists of the following parts:
 
 A partitioning of the compilation process into as many parts as possible was the predominant technique until about 1980, because until then the available store was too small to accommodate the entire compiler. Only individual compiler parts would fit, and they could be loaded one after the other in sequence. The parts were called passes, and the whole was called a multipass compiler. The number of passes was typically 4 - 6, but reached 70 in a particular case (for PL/I) known to the author. Typically, the output of pass k served as input of pass k+1, and the disk served as intermediate storage (Figure 1.1). The very frequent access to disk storage resulted in long compilation times.
 
-![](figures/cc_figure_1_2.png)
+![Figure 1.1. Multipass compilation.](https://github.com/overdev/compiler-construction/blob/master/images/cc_figure_1_1.png)
 _Figure 1.1. Multipass compilation._
 
 Modern computers with their apparently unlimited stores make it feasible to avoid intermediate storage on disk. And with it, the complicated process of serializing a data structure for output, and its reconstruction on input can be discarded as well. With single-pass compilers, increases in speed by factors of several thousands are therefore possible. Instead of being tackled one after another in strictly sequential fashion, the various parts (tasks) are interleaved. For example, code generation is not delayed until all preparatory tasks are completed, but it starts already after the recognition of the first sentential structure of the source text.
@@ -23,7 +23,7 @@ A wise compromise exists in the form of a compiler with two parts, namely a fron
 
 The idea of decoupling source language and target architecture has also led to projects creating several front ends for different languages generating trees for a single back end. Whereas for the implementation of m languages for n computers m * n compilers had been necessary, now m front ends and n back ends suffice (Figure 1.2).
 
-![](figures/cc_figure_1_2.png)
+![Figure 1.2. Front ends and back ends.](https://github.com/overdev/compiler-construction/blob/master/images/cc_figure_1_2.png)
 _Figure 1.2. Front ends and back ends._
 
 This modern solution to the problem of porting a compiler reminds us of the technique which played a significant role in the propagation of Pascal around 1975 (Wirth, 1971). The role of the structural tree was assumed by a linearized form, a sequence of commands of an abstract computer. The back end consisted of an interpreter program which was implementable with little effort, and the linear instruction sequence was called P-code. The drawback of this solution was the inherent loss of efficiency common to interpreters.
